@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mellouki Filali Yassine</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm 1.5cm;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+        }
+        
+        /* Optimisation pour l'impression et les ATS (qui lisent le PDF) */
+        @media print {
+            a {
+                text-decoration: none !important;
+                color: #000 !important;
+                pointer-events: auto;
+            }
+            a[href]:after {
+                content: ""; 
+            }
+            .page-break {
+                page-break-before: always;
+            }
+            section {
+                page-break-inside: avoid; /* Évite de couper un bloc en deux */
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            font-size: 22pt;
+            letter-spacing: 1.5px;
+            color: #1e293b;
+        }
+        .contact-info {
+            font-size: 10.5pt;
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: #1e293b;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px dotted #1e293b;
+        }
+        
+        .profile-title {
+            font-size: 13pt;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #1e293b;
+        }
+        .profile-desc {
+            font-size: 10.5pt;
+            margin-top: 10px;
+            color: #475569;
+            text-align: justify;
+            max-width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 13pt;
+            text-transform: uppercase;
+            border-bottom: 2px solid #1e293b;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #1e293b;
+            letter-spacing: 0.5px;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 11.5pt;
+            font-weight: bold;
+            color: #0f172a;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 3px;
+        }
+        
+        .date {
+            font-size: 10.5pt;
+            font-weight: bold;
+            color: #64748b;
+            text-align: right;
+            min-width: 130px;
+        }
+
+        .sub-title {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        ul {
+            margin: 5px 0 15px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+
+        .skills-container p {
+            margin: 6px 0;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EN-TÊTE ET PROFIL -->
+    <header>
+        <h1>Mellouki Filali Yassine</h1>
+        <div class="contact-info">
+            Fès, Maroc | +212-640589475 | yassinemelloukifilali@gmail.com <br>
+            <a href="https://www.linkedin.com/in/yassine-mellouki-filali-b874082a5/">LinkedIn</a> | 
+            <a href="https://www.melloukifilali.com">www.melloukifilali.com</a>
+        </div>
+        <div class="profile-title">Élève-ingénieur en Génie Aéronautique et Technologies de l'Espace</div>
+        <p class="profile-desc">
+            Passionné par l'industrie aéronautique avec un fort intérêt pour la Qualité, les Méthodes, la Production et la Logistique. J'allie de solides compétences techniques en ingénierie (Conception CAO, Simulation Numérique CFD/FEA, Automatisation Python) à une vision stratégique globale (Supply Chain Management, Sourcing Stratégique, Gestion de projet Agile). Rigoureux et orienté résultats, je suis prêt à relever des défis exigeants dans un environnement dynamique. Mobilité nationale.
+        </p>
+    </header>
+
+    <!-- FORMATION -->
+    <section>
+        <h2>Formation Académique</h2>
+        <div class="job-header">
+            <h3>Cycle d'ingénieur, Génie Aéronautique & Technologies de l'Espace</h3>
+            <span class="date">2024 – Présent</span>
+        </div>
+        <div class="sub-title">École Nationale des Sciences Appliquées (ENSA), Safi</div>
+        <ul>
+            <li><span class="highlight">Modules clés :</span> Aérodynamique, Technologie des propulseurs & Moteurs à piston, CFAO et chaîne numérique, Thermopropulsion, Mécanique des structures, Matériaux aéronautiques, Dessin technique et modélisation CAO, Lean Six Sigma, Mécanique des fluides appliquée, Technologie des hélices, Systèmes embarqués.</li>
+        </ul>
+
+        <div class="job-header">
+            <h3>Classes Préparatoires Intégrées (Mathématiques, Physique, Ingénierie)</h3>
+            <span class="date">2021 – 2024</span>
+        </div>
+        <div class="sub-title">École Nationale des Sciences Appliquées (ENSA), Safi</div>
+        <ul>
+            <li>Acquisition de bases solides en sciences fondamentales, algèbre, programmation algorithmique et analyse numérique.</li>
+        </ul>
+    </section>
+
+    <!-- EXPÉRIENCE -->
+    <section>
+        <h2>Expérience Professionnelle</h2>
+        <div class="job-header">
+            <h3>Stage en Milieu Industriel (Département Production & Qualité)</h3>
+            <span class="date">Juill. 2025 – Août 2025</span>
+        </div>
+        <div class="sub-title">Groupe OCP (Maroc Phosphore II), Safi</div>
+        <ul>
+            <li>Analyse détaillée du procédé chimique de production d’acide sulfurique et cartographie des flux de matières.</li>
+            <li>Étude technique sur site concernant le fonctionnement, l'étalonnage et la maintenance des débitmètres industriels.</li>
+            <li>Immersion dans le système de management intégré de l'usine : familiarisation pratique avec les exigences des normes <span class="highlight">ISO 45001</span> (Santé/Sécurité), <span class="highlight">ISO 9001</span> (Qualité) et <span class="highlight">ISO 14001</span> (Environnement).</li>
+            <li>Interaction avec les équipes opérationnelles pour comprendre les enjeux quotidiens de la chaîne de production et d'approvisionnement.</li>
+        </ul>
+    </section>
+
+    <!-- SAUT DE PAGE POUR LE PDF -->
+    <div class="page-break"></div>
+
+    <!-- PROJETS -->
+    <section>
+        <h2>Projets Ingénierie & Informatique</h2>
+        
+        <div class="job-header"><h3>Wing Generator (Automatisation Python & CAO)</h3></div>
+        <div class="sub-title">Développement PyCATIA</div>
+        <ul>
+            <li>Développement d'un script Python capable de générer automatiquement une aile d'avion en 3D sur <span class="highlight">CATIA V5</span> en moins d'une minute.</li>
+            <li>Automatisation de la création des profils NACA, du lissage par splines et de l'application de la torsion (twist) le long de l'envergure.</li>
+            <li><span class="highlight">Résultat :</span> Réduction drastique du temps de conception préliminaire et élimination des erreurs de tracé manuel, démontrant l'efficacité de la programmation orientée objet appliquée à l'ingénierie mécanique.</li>
+        </ul>
+
+        <div class="job-header"><h3>AutoPrinter (Outil d'optimisation de flux de travail)</h3></div>
+        <div class="sub-title">Projet Personnel d'Amélioration (Python)</div>
+        <ul>
+            <li>Création d'un outil en Python pour automatiser la conversion et le formatage des fichiers de coordonnées aérodynamiques (airfoiltools).</li>
+            <li><span class="highlight">Résultat :</span> Le temps de préparation des fichiers pour l'import dans les logiciels de simulation comme ANSYS est passé de 3 minutes à moins de 10 secondes (gain de productivité significatif).</li>
+        </ul>
+
+        <div class="job-header"><h3>Étude Aérodynamique, Couche Limite & Turbulence (CFD)</h3></div>
+        <div class="sub-title">Projet de simulation numérique</div>
+        <ul>
+            <li>Mise en place de simulations numériques sur <span class="highlight">Ansys Fluent</span> pour étudier l'écoulement de l'air autour des profils NACA 2412 et 0012.</li>
+            <li>Analyse de l'impact de la couche limite et prédiction des zones de turbulence, des coefficients de portance et de traînée.</li>
+        </ul>
+
+        <div class="job-header"><h3>Conception Mécanique : Moteur à Piston 4 Cylindres</h3></div>
+        <div class="sub-title">Projet Collaboratif (Conception & Fabrication)</div>
+        <ul>
+            <li>Modélisation complète en 3D des pièces du moteur (vilebrequin, pistons, bielles) via CATIA V5, incluant l'analyse des contraintes.</li>
+            <li>Préparation de la production : élaboration des contrats de phase, définition des gammes d'usinage et fabrication des pièces sur tour et fraiseuse traditionnels.</li>
+        </ul>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section>
+        <h2>Certifications & Spécialisations</h2>
+        <ul>
+            <li><span class="highlight">Supply Chain Management (Rutgers University / Coursera) :</span> Maîtrise des concepts globaux d'approvisionnement.
+                <ul>
+                    <li><span class="highlight">Supply Chain Planning & Operations :</span> Méthodes de prévision, planification des ressources, Lean Manufacturing, Six Sigma et optimisation des flux.</li>
+                    <li><span class="highlight">Logistics & Sourcing :</span> Gestion d'entrepôt, réseaux de distribution internationaux, sélection des fournisseurs, techniques de négociation et gestion des contrats.</li>
+                    <li><span class="highlight">Project Management & Strategy :</span> Planification (Gantt, PERT), exécution, et alignement stratégique.</li>
+                </ul>
+            </li>
+            <li><span class="highlight">Python Essentials 1 & 2 (Cisco Networking Academy) :</span> Certification attestant la maîtrise de Python, de la gestion des données, de la programmation orientée objet (POO) et de la création de modules/packages.</li>
+        </ul>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section>
+        <h2>Compétences Techniques & Transversales</h2>
+        <div class="skills-container">
+            <p><span class="highlight">Ingénierie & CAO :</span> Ansys (CFD/FEA), Abaqus, Catia V5, SolidWorks, Proteus, Lecture de plans industriels, Usinage.</p>
+            <p><span class="highlight">Informatique & Data :</span> Python (Pandas, PyCATIA), C/C++, SQL (MySQL), Power BI (Analyse de données), Excel avancé (VBA).</p>
+            <p><span class="highlight">Management & Qualité :</span> Sourcing Stratégique, Achats, Supply Chain, Lean Manufacturing, Gestion de Projet (Méthodes Agiles/Scrum), Normes ISO (9001, 14001, 45001).</p>
+            <p><span class="highlight">Soft Skills :</span> Leadership, Travail en équipe multidisciplinaire, Résolution de problèmes complexes, Adaptabilité.</p>
+            <p><span class="highlight">Langues :</span> Arabe (Natif), Français (Courant/Professionnel), Anglais (Courant/Technique).</p>
+        </div>
+    </section>
+
+    <!-- ASSOCIATIF -->
+    <section>
+        <h2>Leadership & Engagement Associatif</h2>
+        <div class="job-header">
+            <h3>Vice-Président (2025) / Membre Actif (2024)</h3>
+            <span class="date">2024 – Présent</span>
+        </div>
+        <div class="sub-title">Aeroclub ENSA Safi</div>
+        <ul>
+            <li>Participation à la vision stratégique du club, recherche de partenariats externes et encadrement des nouvelles recrues.</li>
+            <li>Coordination de projets techniques (CAO) et organisation d'événements majeurs (AeroLegacy, formations ingénierie).</li>
+        </ul>
+
+        <div class="job-header">
+            <h3>Responsable Événementiel (2025) / Membre Cellule (2024)</h3>
+            <span class="date">2023 – Présent</span>
+        </div>
+        <div class="sub-title">Club SPEAK UP (Développement personnel et Art Oratoire)</div>
+        <ul>
+            <li>Gestion budgétaire, planification logistique et management d'équipe pour l'organisation d'événements à succès (Team Building, événement "Ubuntu", sessions de retour d'expérience).</li>
+        </ul>
+    </section>
+
+</body>
+</html>

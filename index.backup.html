@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PNQWT3MG');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mellouki Filali Yassine</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0f172a', // Slate 900
+                            800: '#1e293b', // Slate 800
+                            700: '#334155', // Slate 700
+                        },
+                        brand: {
+                            orange: '#f97316', // Orange 500
+                            yellow: '#eab308', // Yellow 500
+                            blue : '#3b82f6', // Blue 500
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 5px; border: 2px solid #0f172a; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+
+        .square-card {
+            aspect-ratio: 1 / 1;
+            transition: all 0.3s ease;
+        }
+        .square-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-slate-300 font-sans antialiased min-h-screen flex flex-col">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNQWT3MG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Navigation -->
+    <nav class="bg-dark-900/95 backdrop-blur-md border-b border-dark-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold font-tech text-white">
+                        <span class="text-brand-orange">M</span>ELLOUKI.<span class="text-brand-yellow">F</span>Y
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <button onclick="showPage('home')" class="nav-btn text-white hover:text-brand-orange transition font-bold" data-target="home">ACCUEIL</button>
+                    <button onclick="showPage('projects')" class="nav-btn text-slate-400 hover:text-brand-orange transition font-medium" data-target="projects">PROJETS</button>
+                    <button onclick="showPage('activities')" class="nav-btn text-slate-400 hover:text-brand-orange transition font-medium" data-target="activities">PARASCOLAIRE</button>
+                    <button onclick="showPage('certifs')" class="nav-btn text-slate-400 hover:text-brand-orange transition font-medium" data-target="certifs">CERTIFICATIONS</button>
+                    <button onclick="showPage('contact')" class="nav-btn px-5 py-2 bg-gradient-to-r from-brand-orange to-red-500 text-white rounded font-bold hover:shadow-lg hover:shadow-orange-500/30 transition transform hover:-translate-y-0.5">CONTACT</button>
+                </div>
+
+                <!-- Mobile Button -->
+                <div class="flex items-center md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-slate-300 hover:text-brand-orange focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-b border-dark-700">
+            <div class="px-4 pt-2 pb-4 space-y-1">
+                <button onclick="showPage('home')" class="block w-full text-left py-3 text-brand-orange font-bold border-b border-dark-700">ACCUEIL</button>
+                <button onclick="showPage('projects')" class="block w-full text-left py-3 text-slate-300 hover:text-brand-orange">PROJETS</button>
+                <button onclick="showPage('activities')" class="block w-full text-left py-3 text-slate-300 hover:text-brand-orange">PARASCOLAIRE</button>
+                <button onclick="showPage('certifs')" class="block w-full text-left py-3 text-slate-300 hover:text-brand-orange">CERTIFICATIONS</button>
+                <button onclick="showPage('contact')" class="block w-full text-left py-3 text-slate-300 hover:text-brand-orange">CONTACT</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full relative">
+
+        <!-- ================= PAGE: ACCUEIL ================= -->
+        <section id="home" class="page-section fade-in">
+            <!-- Hero Header -->
+            <div class="flex flex-col md:flex-row items-center justify-between mb-16 mt-8">
+                <div class="md:w-2/3 pr-8">
+                    <div class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-brand-yellow uppercase bg-brand-yellow/10 rounded-full border border-brand-yellow/20">
+                        Génie Aéronautique & Technologies de l'Espace
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                        Mellouki Filali <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-yellow">Yassine</span>
+                    </h1>
+                    <p class="text-xl text-slate-400 mb-6 leading-relaxed">
+                        Élève-ingénieur passionné par l'industrie, la qualité, la supply chain, data analytics et la production. 
+                        
+                           Prêt à relever des défis techniques dans un environnement exigeant.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button onclick="showPage('contact')" class="px-6 py-3 bg-brand-orange text-white font-bold rounded hover:bg-orange-600 transition">Me Contacter</button>
+                        
+                        <a href="https://www.linkedin.com/in/yassine-mellouki-filali-b874082a5/" target="_blank" class="px-6 py-3 border border-slate-600 text-slate-300 font-bold rounded hover:border-brand-yellow hover:text-brand-yellow transition">
+                            <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+                        </a>
+
+                        <!-- BOUTON CV AJOUTÉ ICI -->
+                        <a href="mon_cv.pdf" download target="_blank" class="px-6 py-3 border border-slate-600 text-slate-300 font-bold rounded hover:bg-slate-800 hover:text-white hover:border-white transition flex items-center">
+                            <i class="fa-solid fa-download mr-2"></i>Télécharger CV
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/3 mt-8 md:mt-0 flex justify-center relative">
+                    <div class="absolute inset-0 bg-brand-orange/20 blur-3xl rounded-full"></div>
+                    <div class="relative w-64 h-64 rounded-full border-4 border-dark-700 overflow-hidden shadow-2xl bg-dark-800 flex items-center justify-center">
+                        <!-- PHOTO DE PROFIL -->
+                        <img src="monimage.jpg" alt="Mellouki Filali Yassine" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Experience & Formation Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Formation -->
+                <div class="bg-dark-800 p-8 rounded-lg border border-dark-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-brand-yellow/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-brand-yellow/20"></div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i class="fa-solid fa-graduation-cap text-brand-yellow mr-3"></i>Formation</h3>
+                    <ul class="space-y-6 relative z-10">
+                        <li class="pl-4 border-l-2 border-brand-yellow">
+                            <div class="text-sm text-brand-orange font-bold">2024 - Présent</div>
+                            <div class="text-lg font-bold text-white">Cycle d'ingénieur</div>
+                            <div class="text-slate-400">Génie Aéronautique et Technologies de l'Espace</div>
+                            <div class="text-slate-500 text-sm">ENSA, Safi, MA</div>
+                        </li>
+                        <li class="pl-4 border-l-2 border-dark-700">
+                            <div class="text-sm text-brand-orange font-bold">2021 - 2024</div>
+                            <div class="text-lg font-bold text-white">Cycle Préparatoire Intégré</div>
+                            <div class="text-slate-500 text-sm">ENSA, Safi, MA</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Expérience -->
+                <div class="bg-dark-800 p-8 rounded-lg border border-dark-700 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-20 h-20 bg-brand-orange/10 rounded-bl-full -mr-4 -mt-4 transition group-hover:bg-brand-orange/20"></div>
+                    <h3 class="text-2xl font-bold text-white mb-6 flex items-center"><i class="fa-solid fa-briefcase text-brand-orange mr-3"></i>Expérience</h3>
+                    <ul class="space-y-6 relative z-10">
+                        <li class="pl-4 border-l-2 border-brand-orange">
+                            <div class="text-sm text-brand-yellow font-bold">Juillet - Août 2025</div>
+                            <div class="text-lg font-bold text-white">Stage d'observation</div>
+                            <div class="text-slate-400 font-medium">Maroc Phosphor II OCP, Safi</div>
+                            <ul class="mt-2 text-sm text-slate-400 list-disc list-inside space-y-1">
+                                <li>Observation procédé production acide sulfurique</li>
+                                <li>Étude des débitmètres industriels</li>
+                                <li>Apprentissage normes Qualité ISO 45001, 9001, 14001</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-white mb-6 border-b border-dark-700 pb-2">Compétences Techniques</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-dark-800/50 p-5 rounded border border-dark-700">
+                        <h4 class="text-brand-yellow font-bold mb-3">Simulation & CAO</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Ansys</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Abaqus</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Catia V5</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">SolidWorks</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Simulink</span>
+                        </div>
+                    </div>
+                    <div class="bg-dark-800/50 p-5 rounded border border-dark-700">
+                        <h4 class="text-brand-orange font-bold mb-3">Programmation & Data</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Python</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">C/C++</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Power BI</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">MySQL</span>
+                            <span class="px-3 py-1 bg-dark-700 rounded text-sm text-slate-300">Excel (VBA)</span>
+                        </div>
+                    </div>
+                     <div class="bg-dark-800/50 p-5 rounded border border-dark-700">
+                        <h4 class="text-white font-bold mb-3">Soft Skills</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-dark-700/50 border border-slate-600 rounded text-sm text-slate-400">Flexibilité</span>
+                            <span class="px-3 py-1 bg-dark-700/50 border border-slate-600 rounded text-sm text-slate-400">Gestion d'équipe</span>
+                            <span class="px-3 py-1 bg-dark-700/50 border border-slate-600 rounded text-sm text-slate-400">Résolution problèmes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DYNAMIC SECTION: PROJETS ================= -->
+        <section id="projects" class="page-section hidden fade-in">
+            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-brand-orange pl-4">Projets Académiques & Personnels</h2>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+
+        <!-- ================= DYNAMIC SECTION: PARASCOLAIRE ================= -->
+        <section id="activities" class="page-section hidden fade-in">
+            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-brand-yellow pl-4">Vie Associative & Clubs</h2>
+             <div id="activities-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </section>
+
+        <!-- ================= DYNAMIC SECTION: CERTIFICATIONS ================= -->
+        <section id="certifs" class="page-section hidden fade-in">
+            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-brand-orange pl-4">Mes Certifications</h2>
+             <!-- Container for Cards - Retour à 2 colonnes pour les groupes principaux -->
+             <div id="certifs-container" class="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
+        </section>
+
+        <!-- ================= DETAIL VIEW (Overlay) ================= -->
+        <section id="detail-view" class="hidden fixed inset-0 z-[60] bg-dark-900 overflow-y-auto">
+            <div class="bg-dark-800 border-b border-dark-700 p-4 sticky top-0 z-10 flex justify-between items-center shadow-md">
+                <button onclick="closeDetail()" class="flex items-center text-slate-300 hover:text-white transition">
+                    <i class="fa-solid fa-arrow-left mr-2 bg-dark-700 p-2 rounded-full"></i> Retour
+                </button>
+                <div class="text-brand-orange font-tech font-bold" id="detail-category">Catégorie</div>
+            </div>
+            <div class="max-w-4xl mx-auto p-6 md:p-12">
+                <div id="detail-content" class="fade-in"></div>
+            </div>
+        </section>
+
+       <!-- ================= PAGE: CONTACT ================= -->
+        <section id="contact" class="page-section hidden fade-in">
+            <h2 class="text-3xl font-bold text-white mb-8 border-l-4 border-brand-orange pl-4">Contactez-moi</h2>
+            <div class="max-w-4xl mx-auto bg-dark-800 rounded-2xl shadow-2xl border border-dark-700 overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-5/12 bg-gradient-to-br from-brand-orange to-red-600 p-10 text-white flex flex-col justify-between relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-2">Infos de Contact</h3>
+                            <p class="text-orange-100 text-sm mb-8">N'hésitez pas à me contacter.</p>
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4"><i class="fa-solid fa-envelope"></i><span>yassinemelloukifilali@gmail.com</span></div>
+                                <div class="flex items-center space-x-4"><i class="fa-solid fa-phone"></i><span>+212-640589475</span></div>
+                                <div class="flex items-center space-x-4"><i class="fa-solid fa-location-dot"></i><span>Fès, Maroc</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-7/12 p-10">
+                        <!-- MODIFICATION ICI : Ajout de l'ID 'contact-form' et suppression de l'action directe pour le JS -->
+                        <form id="contact-form" action="https://formsubmit.co/yassinemelloukifilali@gmail.com" method="POST" class="space-y-5">
+                            
+                            <input type="hidden" name="_subject" value="Nouveau message du Portfolio !">
+                            <input type="hidden" name="_captcha" value="false">
+                            <!-- Important: on définit une redirection de secours vers votre propre site pour éviter la page de pubs -->
+                            <input type="hidden" name="_next" id="next-redirect" value=""> 
+
+                            <div>
+                                <input type="text" name="name" required class="w-full bg-dark-900 border border-dark-700 text-white px-4 py-3 rounded focus:outline-none focus:border-brand-orange transition" placeholder="Nom complet">
+                            </div>
+                            <div>
+                                <input type="email" name="email" required class="w-full bg-dark-900 border border-dark-700 text-white px-4 py-3 rounded focus:outline-none focus:border-brand-orange transition" placeholder="Email">
+                            </div>
+                            <div>
+                                <textarea name="message" required class="w-full bg-dark-900 border border-dark-700 text-white px-4 py-3 rounded focus:outline-none focus:border-brand-orange transition" rows="4" placeholder="Message"></textarea>
+                            </div>
+                            <!-- MODIFICATION ICI : Ajout de l'ID 'submit-btn' -->
+                            <button id="submit-btn" type="submit" class="w-full bg-brand-yellow text-dark-900 font-bold py-3 px-4 rounded hover:bg-yellow-400 transition transform hover:-translate-y-1 flex items-center justify-center">
+                                <span>Envoyer le Message</span>
+                                <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark-900 border-t border-dark-700 mt-auto py-8 text-center text-slate-500">
+        © 2025 Mellouki Filali Yassine.
+    </footer>
+
+    <!-- JAVASCRIPT: DONNÉES ET LOGIQUE -->
+    <script>
+        // =========================================================================
+        // GESTION DU FORMULAIRE DE CONTACT (AJAX)
+        // =========================================================================
+        
+        // 1. Configurer la redirection de secours (évite la page FormSubmit si le JS échoue)
+        document.getElementById('next-redirect').value = window.location.href;
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche le rechargement de la page
+            
+            const btn = document.getElementById('submit-btn');
+            const originalContent = btn.innerHTML;
+            
+            // 2. État de chargement
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> Envoi en cours...';
+            btn.disabled = true;
+            
+            const formData = new FormData(this);
+            
+            // Envoi via AJAX vers FormSubmit (C'est cette partie qui évite les pubs)
+            fetch('https://formsubmit.co/ajax/yassinemelloukifilali@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 3. État de succès (Vert)
+                btn.innerHTML = '<i class="fa-solid fa-check mr-2"></i> Message Envoyé !';
+                // Changement de style : on enlève le jaune/orange et on met du vert
+                btn.classList.remove('bg-brand-yellow', 'text-dark-900', 'hover:bg-yellow-400');
+                btn.classList.add('bg-green-600', 'text-white', 'hover:bg-green-700');
+                
+                // Vider le formulaire
+                document.getElementById('contact-form').reset();
+                
+                // Remettre le bouton à la normale après 5 secondes
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.add('bg-brand-yellow', 'text-dark-900', 'hover:bg-yellow-400');
+                    btn.classList.remove('bg-green-600', 'text-white', 'hover:bg-green-700');
+                    btn.disabled = false;
+                }, 5000);
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                // Si l'AJAX échoue, on soumet le formulaire normalement (le champ _next prendra le relais)
+                btn.innerHTML = '<i class="fa-solid fa-triangle-exclamation mr-2"></i> Erreur. Réessayez.';
+                btn.classList.add('bg-red-500', 'text-white');
+                btn.disabled = false;
+            });
+        });
+        // =========================================================================
+        // ZONE DE DONNÉES - Ajoutez ici vos images dans le champ 'image'
+        // =========================================================================
+        
+        const portfolioData = [
+            // --- SECTION PROJETS ---
+             {
+                id: 'Avion',
+                type: 'projects',
+                category: 'PROJET ACADÉMIQUE',
+                shortTitle: 'Commandes de vol',
+                fullTitle: 'Realisation d\'une maquette d\'avion',
+                subtitle: 'Aèronautique, Systemes Embarqués...',
+                tag: 'Aéronautique',
+                image: 'Tyara.jpeg', // URL IMAGE
+                icon: 'fa-gears',
+                color: 'text-brand-blue',
+                detailsHTML: `
+                    <div class="mb-6">
+                        <!-- DESCRIPTION DÉTAILLÉE -->
+                        <h3 class="text-xl font-bold text-white mb-3">Description Détaillée</h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+**Projet académique – Realisation d\'une maquette d\'avion**<br>
+
+Dans le cadre de ma formation en Génie Aéronautique et Technologies de l'Espace, j'ai co-conçu et réalisé un prototype fonctionnel de commandes de vol électriques (Fly-by-Wire) appliqué à une maquette d'aéronef.
+ L'objectif principal de ce projet est à la fois technique et pédagogique : reproduire fidèlement la chaîne d'acquisition, de traitement et d'actionnement des avions modernes pour étudier la stabilité et le contrôle multi-axes en temps réel. 
+  <br>⚙️ Principe de Fonctionnement & Architecture TechniqueLe système convertit les actions physiques du pilote en mouvements aérodynamiques précis à travers quatre étapes clés :  
+      </br>  <p style="margin-left: 30px;">    L'Acquisition (IHM) : Les consignes de roulis et de tangage sont captées via un manipulateur industriel à 4 directions. Pour l'axe de lacet, nous avons développé une solution originale en intégrant un capteur ultrasonique (HC-SR04) au sein d'une structure mécanique mobile (type troueuse de feuilles) faisant office de palonniers. Le calculateur mesure ainsi les variations de distance pour en déduire l'effort du pilote.  Le Traitement (Calculateur de Vol) : Une unité centrale basée sur un microcontrôleur ATmega centralise les données analogiques et numériques, applique les lois de pilotage (mapping et filtrage du bruit) et génère les signaux de commande. </p> 
+         <br><p style="margin-left: 30px;">   L'Actionnement Électromécanique : Les ordres sont transmis sous forme de signaux PWM à des servomoteurs numériques à fort couple (20 Kg.cm), assurant une déflexion angulaire rigoureuse et indépendante des ailerons, de la gouverne de profondeur et de la gouverne de direction.  
+         <br>   La Télémétrie & Sécurité : Un écran LCD connecté en I2C assure la supervision visuelle en affichant dynamiquement les angles de vol (Roulis, Tangage, Lacet). Le système intègre également un algorithme de sécurité qui déclenche une alerte automatique de risque de décrochage dès que le tangage dépasse 15°.  </p>
+         <br>   ⚡ Gestion de l'Énergie & FiabilitéPour garantir la stabilité du système face aux forts appels de courant des servomoteurs, l'architecture électrique intègre une ségrégation stricte des réseaux : un bus logique basse puissance pour le calculateur et les capteurs, et un bus de puissance dédié aux actionneurs, reliés par une masse commune. Les phases d'essais au sol ont été validées en laboratoire à l'aide d'un générateur CC régulé en mode Tension Constante (C.V.) avec protection par limitation de Courant Constant (C.C.).  
+         <br>
+          <br>  🎯 Compétences Validées
+          <br> <p style="margin-left: 30px;">     Ingénierie Systèmes : Spécification du cahier des charges, modélisation des chaînes d'information et d'énergie.  
+          <br>      Systèmes Embarqués : Interfaçage de capteurs (Ultrasons, Potentiomètres), bus de communication (I2C), génération de signaux PWM.  
+          <br>      Électronique & Puissance : Routage de circuits, isolation de puissance, utilisation d'appareillages de laboratoire (Alimentations régulées DC).  
+           <br>     Validation & Test : Plan de tests d'intégration, calibration statique et résolution de problématiques mécaniques (jeux et alignements) </p>
+           <br>
+                        <!-- GALERIE 3 IMAGES -->
+                        <h3 class="text-xl font-bold text-white mb-3">Galerie du Projet</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <!-- Image 1 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="complet.jpeg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="aileronn.jpeg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="gouverne.jpeg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+     <!-- ZONE VIDÉO CORRIGÉE POUR FICHIER LOCAL -->
+                        <h3 class="text-xl font-bold text-white mb-3">Démonstration Vidéo</h3>
+                        <div class="w-full bg-dark-800 rounded-lg border border-dark-700 mb-8 overflow-hidden shadow-lg">
+                            <!-- 
+                                IMPORTANT : 
+                                1. Placez votre vidéo dans le même dossier que ce fichier HTML.
+                                2. Renommez votre vidéo en "demo_wing.mp4" OU changez le nom dans src="" ci-dessous.
+                            -->
+                            <video controls class="w-full h-auto">
+                                <source src="project1.mp4" type="video/mp4">
+                                <!-- Message de secours si le format n'est pas supporté -->
+                                Votre navigateur ne supporte pas la lecture de vidéos HTML5. Veuillez télécharger la vidéo.
+                            </video>
+                        </div>                   
+                        <a href="https://www.linkedin.com/posts/yassine-mellouki-filali-b874082a5_ingaeznierie-aaezronautique-systaeymesembarquaezs-ugcPost-7472345656528023552-1oXz/" target="_blank" class="inline-block bg-brand-blue text-white px-6 py-3 rounded font-bold hover:bg-blue-600 transition">Voir sur LinkedIn</a>
+                    </div>
+                `
+            },
+            {
+                id: 'meca',
+                type: 'projects',
+                category: 'PROJET ACADÉMIQUE',
+                shortTitle: 'Moteur à Piston',
+                fullTitle: 'Conception d\'un moteur à piston',
+                subtitle: 'Catia V5, Usinage, Contrat de phase...',
+                tag: 'Conception (CAO)',
+                image: 'moteur.jpg', // URL IMAGE
+                icon: 'fa-gears',
+                color: 'text-brand-orange',
+                detailsHTML: `
+                    <div class="mb-6">
+                        <!-- DESCRIPTION DÉTAILLÉE -->
+                        <h3 class="text-xl font-bold text-white mb-3">Description Détaillée</h3>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+**Projet académique – Conception d’un moteur à piston (4 cylindres)**
+
+Dans le cadre de notre formation en aéronautique et technologies de l’espace, j’ai participé à un projet enrichissant sur la conception et l’analyse d’un moteur à piston à 4 cylindres.
+
+Ce travail nous a permis d’approfondir :
+- **Notions clés** en mécanique, modélisation CAO et dynamique des systèmes propulsifs
+- Compétences en **travail collaboratif** et gestion de projet technique
+
+**Remerciements sincères** à Monsieur Hakim, notre encadrant, pour son accompagnement constant, ses conseils techniques avisés et sa rigueur pédagogique qui ont contribué à la réussite du projet.
+
+Merci aussi à mes collègues :<br>
+- Yasser Elalaoui<br>
+- Abderrahmane Laoudai<br>
+- Faissal El Hilali <br>
+
+Pour leur engagement, professionnalisme et excellente dynamique de groupe.
+
+Ce projet marque une étape clé dans notre parcours académique, aligné sur les exigences du secteur aéronautique.                        </p>
+
+                        <!-- LISTE DE TÂCHES EXISTANTE -->
+                        <div class="bg-dark-800 p-5 rounded border border-dark-700 mb-6">
+                            <h4 class="text-brand-yellow font-bold mb-2">Tâches Clés</h4>
+                            <ul class="list-disc list-inside text-slate-400 space-y-2">
+                                <li>Analyse fonctionnelle.</li>
+                                <li>Conception 3D sur <strong>Catia V5</strong>.</li>
+                            </ul>
+                        </div>
+
+                        <!-- GALERIE 3 IMAGES -->
+                        <h3 class="text-xl font-bold text-white mb-3">Galerie du Projet</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <!-- Image 1 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="dessin.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="vilb.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-40 flex items-center justify-center">
+                                <img src="pist.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <a href="https://www.linkedin.com/posts/yassine-mellouki-filali-b874082a5_aaezronautique-ingaeznieriemaezcanique-technologiesspatiales-activity-7328360617780649984-OtrS" target="_blank" class="inline-block bg-brand-orange text-white px-6 py-3 rounded font-bold hover:bg-orange-600 transition">Voir sur LinkedIn</a>
+                    </div>
+                `
+            },
+            {
+                id: 'cfd',
+                type: 'projects',
+                category: 'PROJET ACADÉMIQUE',
+                shortTitle: 'Couche Limite',
+                fullTitle: 'Étude Couche Limite & Turbulence',
+                subtitle: 'Simulation numérique, Profils NACA...',
+                tag: 'Aérodynamique & CFD',
+                image: 'airfoil.png', // URL IMAGE
+                icon: 'fa-wind',
+                color: 'text-brand-yellow',
+                detailsHTML: `
+                     <div class="mb-6">
+                        <!-- DESCRIPTION DÉTAILLÉE -->
+                        <h3 class="text-xl font-bold text-white mb-3">Contexte Scientifique</h3>
+                        <p class="text-slate-300 text-lg mb-6">
+    Nous avons réalisé un mini-projet enrichissant dans le cadre de notre formation en Génie Aéronautique à l’ENSA de Safi.
+
+Ce projet a couvert l’étude complète de la couche limite, phénomène fondamental en aérodynamique :<br>
+
+   Étude théorique sur le comportement de la couche limite et le phénomène de turbulence.<br>
+
+   Retour sur l’histoire du concept de couche limite.<br>
+
+   Analyse de son influence sur l’angle de croisement, les bords d’attaque et de fuite.<br>
+
+   En parallèle, étude numérique CFD sur les profils NACA 2412 et NACA 0012 pour observer l’impact de la couche limite sur l’écoulement réel autour d’un profil.<br>
+
+Grand merci à notre encadrant M. OUAKKAROUCH Mohammed pour ses conseils, et bravo à toute l’équipe pour ce beau travail collaboratif.                        </p>
+
+                        <!-- GALERIE 3 IMAGES -->
+                        <h3 class="text-xl font-bold text-white mb-3">Résultats de Simulation</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <!-- Image 1 -->
+                            <div class="bg-dark-1000 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="garde.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="bg-dark-1000 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="theorie.jpg" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="bg-dark-1000 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="sim.jpg" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <a href="https://www.linkedin.com/posts/yassine-mellouki-filali-b874082a5_cfd-aaezrodynamique-couchelimite-activity-7349801776910401536-04t6" target="_blank" class="bg-brand-yellow text-dark-900 px-6 py-3 rounded font-bold">Voir sur LinkedIn</a>
+                    </div>
+                `
+            },
+           {
+                id: 'printer',
+                type: 'projects',
+                category: 'PROJET PERSONNEL',
+                shortTitle: 'AutoPrinter',
+                fullTitle: 'AutoPrinter - Automatisation',
+                subtitle: 'Automatisation, Gain de temps radical.',
+                tag: 'Projet Personnel',
+                image: 'auto.png', // URL IMAGE
+                icon: 'fa-print',
+                color: 'text-green-500',
+                detailsHTML: `
+                    <div class="mb-6">
+                        <!-- DESCRIPTION DÉTAILLÉE -->
+                        <h3 class="text-xl font-bold text-white mb-3">Genèse du Projet</h3>
+                        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+                            Auto Printer – <strong>Gain de temps radical</strong> pour vos profils aérodynamiques ANSYS.<br><br>
+                            Je vous présente Auto Printer, un outil Python que j'ai développé pour automatiser la conversion des fichiers airfoil (<em>.csv</em>) de airfoiltools.com en fichiers <em>.txt</em> directement exploitables par ANSYS.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <!-- Compétences -->
+                            <div class="bg-dark-800 p-5 rounded border border-dark-700">
+                                <h4 class="text-green-500 font-bold mb-2"><i class="fa-solid fa-code mr-2"></i>Compétences appliquées</h4>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1 text-sm">
+                                    <li>Programmation orientée objet (Python Essentiel 2)</li>
+                                    <li>Gestion avancée de fichiers</li>
+                                    <li>Modules <code>pyfiglet</code> & <code>colorama</code> pour interface console soignée</li>
+                                </ul>
+                            </div>
+                            <!-- Comparaison -->
+                            <div class="bg-dark-800 p-5 rounded border border-dark-700">
+                                <h4 class="text-green-500 font-bold mb-2"><i class="fa-solid fa-stopwatch mr-2"></i>Comparaison concrète</h4>
+                                <div class="flex justify-between items-center border-b border-dark-600 py-2">
+                                    <span class="text-slate-400">Méthode Manuelle</span>
+                                    <span class="text-red-400 font-bold">3+ minutes</span>
+                                </div>
+                                <div class="flex justify-between items-center py-2">
+                                    <span class="text-white font-bold">Auto Printer</span>
+                                    <span class="text-green-400 font-bold text-lg">&lt; 10 secondes</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ÉTAPES ET IMAGES -->
+                        <h3 class="text-xl font-bold text-white mb-4">Utilisation en 6 étapes</h3>
+                        <div class="space-y-8">
+                            
+                            <!-- Groupe 1 : Téléchargement -->
+                            <div class="bg-dark-800/50 p-4 rounded-lg border border-dark-700">
+                                <p class="text-slate-300 mb-4">
+                                    <span class="text-green-500 font-bold">1.</span> Téléchargez un profil .csv depuis airfoiltools.com.<br>
+                                    <span class="text-green-500 font-bold">2.</span> Renommez le fichier avec un nom simple (ex. : naca0012.csv).<br>
+                                    <span class="text-green-500 font-bold">3.</span> Placez le fichier dans le même dossier que le script AutoPrinter.py.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <img src="etape1.png" alt="Etape 1" class="w-full h-50 object-cover rounded border border-dark-600">
+                                    <!-- Placeholder si pas d'image 2 -->
+                                </div>
+                            </div>
+
+                            <!-- Groupe 2 : Exécution -->
+                            <div class="bg-dark-800/50 p-4 rounded-lg border border-dark-700">
+                                <p class="text-slate-300 mb-4">
+                                    <span class="text-green-500 font-bold">4.</span> Exécutez le script <code>AutoPrinter.py</code> via terminal ou PyCharm.<br>
+                                    <span class="text-green-500 font-bold">5.</span> Saisissez le nom du fichier (sans extension) lorsqu’il est demandé.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <img src="etape2.png" alt="Etape 2" class="w-full h-50 object-cover rounded border border-dark-600">
+                                    <img src="etape3.png" alt="Etape 3" class="w-full h-50 object-cover rounded border border-dark-600">
+                                </div>
+                            </div>
+
+                            <!-- Groupe 3 : Résultat -->
+                            <div class="bg-dark-800/50 p-4 rounded-lg border border-dark-700">
+                                <p class="text-slate-300 mb-4">
+                                    <span class="text-green-500 font-bold">6.</span> Un fichier .txt propre, structuré et compatible ANSYS est généré automatiquement.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <img src="etape4.png" alt="Etape 4" class="w-full h-50 object-cover rounded border border-dark-600">
+                                    <img src="etape5.png" alt="Etape 5" class="w-full h-50 object-cover rounded border border-dark-600">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-dark-700 text-center">
+                            <p class="text-slate-400 mb-4 text-sm">Auto Printer accélère, fiabilise et simplifie votre flux de travail en ingénierie aéronautique.</p>
+                            <a href="https://www.linkedin.com/posts/yassine-mellouki-filali-b874082a5_auto-printer-un-gain-de-temps-radical-activity-7338697716702584832-qHoz" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded font-bold hover:bg-green-500 transition shadow-lg shadow-green-900/50">
+                                <i class="fa-brands fa-linkedin mr-2"></i>En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 'wing_gen',
+                type: 'projects',
+                category: 'PROJET INDIVIDUEL',
+                shortTitle: 'Wing Generator',
+                fullTitle: 'Wing Generator',
+                subtitle: 'Génération d\'ailes sur CATIA',
+                tag: 'Automatisation CAO',
+                image: 'generator.png', // URL IMAGE
+                icon: 'fa-plane-up',
+                color: 'text-indigo-400',
+                detailsHTML: `
+                     <div class="mb-6">
+                        <!-- DESCRIPTION DÉTAILLÉE -->
+                        <h3 class="text-xl font-bold text-white mb-3">Fonctionnement Technique</h3>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-6">
+En 1 minute chrono, une aile complète prête à l'emploi ! ⏱️✈️<br>
+
+Fatigué de passer des heures à tracer manuellement point par point la géométrie d'une aile dans CATIA ? 😫<br>
+Fini les tâches répétitives et les erreurs humaines !<br>
+
+🚀 Mon script Python révolutionne votre workflow<br>
+Développé avec PyCATIA pour contrôler nativement CATIA V5, ce générateur automatise 100% de la conception :<br>
+
+Génère automatiquement une aile complète en 4 étapes clés :<br>
+
+✅Peau d'aile 3D : Multi-Sections Surface fluide entre plusieurs sections NACA torsadées (racine vers extrémité)<br>
+
+✅Structure interne robuste : Longerons principaux + nervures multiples créés par extrusions perpendiculaires à la peau<br>
+
+✅Optimisation poids : Trous d'allègement positionnés intelligemment (zones de contraintes faibles identifiées)<br>
+✨ Détails techniques qui font la différence <br>
+✅Profils NACA (4/5/6 chiffres) générés avec précision chirurgicale <br>
+
+✅Splines parfaitement lisses via factory2D.create_spline()  – adieu le "peigne" de lignes droites ! <br>
+
+✅Torsion progressive appliquée automatiquement sur chaque section, Démonstration vidéo ci-dessous 👇                      </p>
+
+                        <!-- ZONE VIDÉO CORRIGÉE POUR FICHIER LOCAL -->
+                        <h3 class="text-xl font-bold text-white mb-3">Démonstration Vidéo</h3>
+                        <div class="w-full bg-dark-800 rounded-lg border border-dark-700 mb-8 overflow-hidden shadow-lg">
+                            <!-- 
+                                IMPORTANT : 
+                                1. Placez votre vidéo dans le même dossier que ce fichier HTML.
+                                2. Renommez votre vidéo en "demo_wing.mp4" OU changez le nom dans src="" ci-dessous.
+                            -->
+                            <video controls class="w-full h-auto">
+                                <source src="Vid.mp4" type="video/mp4">
+                                <!-- Message de secours si le format n'est pas supporté -->
+                                Votre navigateur ne supporte pas la lecture de vidéos HTML5. Veuillez télécharger la vidéo.
+                            </video>
+                        </div>
+
+                        <!-- GALERIE 3 IMAGES -->
+                        <h3 class="text-xl font-bold text-white mb-3">Captures d'écran</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                            <!-- Image 1 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="t1.png" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="t2.png" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="bg-dark-800 rounded-lg border border-dark-700 overflow-hidden h-100">
+                                <img src="t3.png" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <div class="bg-dark-800 p-5 rounded border border-dark-700 mb-4">
+                            <ul class="list-disc list-inside text-slate-400 space-y-2">
+                                <li>Création automatique des profils aérodynamiques.</li>
+                                <li>Génération des surfaces et volumes en un clic.</li>
+                                <li>Gain de temps significatif sur la phase de conception préliminaire.</li>
+                            </ul>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-dark-700 text-center">
+                            <p class="text-slate-400 mb-4 text-sm">Auto Printer accélère, fiabilise et simplifie votre flux de travail en ingénierie aéronautique.</p>
+                            <a href="https://www.linkedin.com/posts/yassine-mellouki-filali-b874082a5_catia-python-automation-ugcPost-7421686403580813312-VK00" target="_blank" class="inline-block bg-green-600 text-white px-8 py-3 rounded font-bold hover:bg-green-500 transition shadow-lg shadow-green-900/50">
+                                <i class="fa-brands fa-linkedin mr-2"></i>En savoir plus
+                            </a>
+                        </div>
+                    </div>
+                `
+            },
+
+            // --- SECTION CLUBS ---
+            {
+                id: 'speakup',
+                type: 'activities',
+                category: 'CLUB & ASSOCIATIF',
+                shortTitle: 'SPEAK UP',
+                fullTitle: 'Club SPEAK UP - ENSA',
+                subtitle: 'Responsable Événementiel (2025)',
+                tag: 'Leadership',
+                image: 'speak.png', // URL IMAGE CLUB
+                icon: 'fa-microphone-lines',
+                color: 'text-red-500',
+                detailsHTML: `
+                     <div class="mb-6">
+                        <!-- BANNIÈRE HEADER -->
+                        <div class="bg-gradient-to-r from-orange-500 to-dark-100 p-6 rounded-lg mb-8 border-l-4 border-orange-500">
+                            <h2 class="text-3xl font-bold text-white mb-2">Club SPEAK UP</h2>
+                            <p class="text-orange-200">Promotion de la prise de parole en public et du leadership.</p>
+                        </div>
+
+                        <!-- CARTE D'ÉVOLUTION (TIMELINE) -->
+                        <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-arrow-trend-up mr-2 text-orange-500"></i>Évolution des Responsabilités</h3>
+                        <div class="relative border-l-2 border-dark-700 ml-3 mb-10 space-y-8">
+                            
+                            <!-- Role 2025 -->
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-orange-500 border-2 border-dark-900"></div>
+                                <h4 class="text-xl font-bold text-white">Responsable Événementiel <span class="text-xs bg-orange-500/20 text-orange-400 px-2 py-1 rounded ml-2">2025 - Présent</span></h4>
+                                <p class="text-slate-400 mt-1">Gestion complète des événements du club, coordination des équipes, logistique et planification stratégique.</p>
+                            </div>
+
+                            <!-- Role 2024 -->
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-dark-600 border-2 border-dark-900"></div>
+                                <h4 class="text-lg font-bold text-slate-300">Membre Cellule Événementielle <span class="text-xs bg-dark-700 text-slate-400 px-2 py-1 rounded ml-2">2024</span></h4>
+                                <p class="text-slate-500 mt-1">Participation active à l'organisation opérationnelle des activités.</p>
+                            </div>
+
+                            <!-- Role 2023 -->
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-dark-600 border-2 border-dark-900"></div>
+                                <h4 class="text-lg font-bold text-slate-300">Membre Actif <span class="text-xs bg-dark-700 text-slate-400 px-2 py-1 rounded ml-2">2023</span></h4>
+                                <p class="text-slate-500 mt-1">Intégration au club et participation aux formations hebdomadaires.</p>
+                            </div>
+                        </div>
+
+                        <!-- ÉVÉNEMENTS CLÉS (BLOCS CARRÉS CLIQUABLES) -->
+                        <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-calendar-check mr-2 text-orange-500"></i>Événements Réalisés</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            
+                            <!-- Event 1: Ubuntu -->
+                            <a href="https://www.linkedin.com/posts/speak-up-ensa-safi_ubuntu-speakabrup-bde-activity-7321104619135254532-AcnS" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-red-500 transition">
+                                <img src="ubuntu.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-orange-400 transition">Ubuntu Event</h4>
+                                    <p class="text-xs text-slate-400">Cohésion & Partage</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                            <!-- Event 2: Team Building -->
+                            <a href="https://www.linkedin.com/posts/speak-up-ensa-safi_retour-sur-le-team-building-19-octobre-activity-7388265312737132544-R7RX" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-red-500 transition">
+                                <img src="team.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-orange-400 transition">Team Building</h4>
+                                    <p class="text-xs text-slate-400">Renforcement d'équipe</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                            <!-- Event 3: Leadership Retex -->
+                            <a href="https://www.linkedin.com/posts/speak-up-ensa-safi_speakupensa-retex3-leadership-activity-7392951051877830656-BBUV" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-red-500 transition">
+                                <img src="retex.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-orange-400 transition">Leadership Retex</h4>
+                                    <p class="text-xs text-slate-400">Retour d'expérience</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+                            <!-- Event 4: SPEAK AGAIN 2.0 -->
+                            <a href="https://www.linkedin.com/posts/speak-up-ensa-safi_speakup-speakagain2-ensasafi-activity-7457465641982308353-VRHw" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-red-500 transition">
+                                <img src="speakagain.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-orange-400 transition">SPEAK AGAIN 2.0</h4>
+                                    <p class="text-xs text-slate-400">Retour d'expérience</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 'aero',
+                type: 'activities',
+                category: 'CLUB & ASSOCIATIF',
+                shortTitle: 'AEROCLUB',
+                fullTitle: 'AEROCLUB ENSA SAFI',
+                subtitle: 'Vice-Président (2025)',
+                tag: 'Aéronautique',
+                image: 'Aeroclub logo.jpg', // URL IMAGE CLUB
+                icon: 'fa-plane-departure',
+                color: 'text-yellow-500',
+                detailsHTML: `
+                     <div class="mb-6">
+                        <!-- BANNIÈRE HEADER -->
+                        <div class="bg-gradient-to-r from-yellow-500 to-dark-800 p-6 rounded-lg mb-8 border-l-4 border-yellow-500">
+                            <h2 class="text-3xl font-bold text-white mb-2">AEROCLUB</h2>
+                            <p class="text-yellow-200">Innovation, Aéronautique et Technologies Spatiales.</p>
+                        </div>
+
+                        <!-- CARTE D'ÉVOLUTION (TIMELINE) -->
+                        <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-arrow-trend-up mr-2 text-yellow-500"></i>Évolution des Responsabilités</h3>
+                        <div class="relative border-l-2 border-dark-700 ml-3 mb-10 space-y-8">
+                            
+                            <!-- Role 2025 -->
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-yellow-500 border-2 border-dark-900"></div>
+                                <h4 class="text-xl font-bold text-white">Vice-Président <span class="text-xs bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded ml-2">2025 - Présent</span></h4>
+                                <p class="text-slate-400 mt-1">Leadership stratégique, partenariats externes et supervision des projets techniques.</p>
+                            </div>
+
+                            <!-- Role 2024 -->
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-dark-600 border-2 border-dark-900"></div>
+                                <h4 class="text-lg font-bold text-slate-300">Membre Actif <span class="text-xs bg-dark-700 text-slate-400 px-2 py-1 rounded ml-2">2024</span></h4>
+                                <p class="text-slate-500 mt-1">Participation aux projets d'innovation et ateliers techniques.</p>
+                            </div>
+                        </div>
+
+                        <!-- ÉVÉNEMENTS CLÉS (BLOCS CARRÉS CLIQUABLES) -->
+                        <h3 class="text-xl font-bold text-white mb-4"><i class="fa-solid fa-rocket mr-2 text-yellow-500"></i>Projets & Activités</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            
+                            <!-- Event 1: AeroLegacy -->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aerolegacy-ensaabrsafi-aeronautique-activity-7393716670101446656-UJFO" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="legacy.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">AeroLegacy</h4>
+                                    <p class="text-xs text-slate-400">Retour des lauréat(e)s</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                            <!-- Event 2: Partage Expérience -->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aeroclub-partagedexperience-stage-activity-7411456527808598016-bucB" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="retour.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Retour d'Expérience</h4>
+                                    <p class="text-xs text-slate-400">Session Partage Stages</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                            <!-- Event 3: Weekend Flight -->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_weekendflight-aeroclub-nouveauconcept-activity-7412552624408973312-4BOy" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="webi.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Weekend Flight</h4>
+                                    <p class="text-xs text-slate-400">Echange</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+                            <!--Collaboration:-->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aeroclub-partenariat-formation-activity-7417961116426919936-CiY0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmQvJcBeJeo8vU-JKUaSsCZgwoI-wkLGV4" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="form.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Formation bureau d'études avec  𝐓𝐞𝐜𝐡𝐧𝐨 𝐈𝐧𝐠é𝐧𝐢𝐞𝐫𝐢𝐞</h4>
+                                    <p class="text-xs text-slate-400">Formation</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+                            <!--visite du président-->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aeroclub-aaezronautique-filiaeyreaaezronautique-activity-7416543267087015936-NjGX?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmQvJcBeJeo8vU-JKUaSsCZgwoI-wkLGV4" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="visite.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Visite du Président de l'UCA</h4>
+                                    <p class="text-xs text-slate-400"></p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aaezroclubensasafi-aaezronautique-innovation-activity-7389703408087183360-yIy-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmQvJcBeJeo8vU-JKUaSsCZgwoI-wkLGV4" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="stand.jpg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Stand</h4>
+                                    <p class="text-xs text-slate-400">Présentation du club</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+                            <!-- Event 4: Journée aeronautique -->
+                            <a href="https://www.linkedin.com/posts/aeroclub-ensa-safi_aeroclub-aeronautique-innovation-activity-7457430225115648001-hObK" target="_blank" class="block group relative aspect-square bg-dark-800 rounded-lg overflow-hidden border border-dark-700 hover:border-blue-500 transition">
+                                <img src="journe.jpeg" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent opacity-90"></div>
+                                <div class="absolute bottom-0 left-0 p-4">
+                                    <h4 class="text-lg font-bold text-white group-hover:text-yellow-400 transition">Journée Aeronautique</h4>
+                                    <p class="text-xs text-slate-400">Innovation</p>
+                                </div>
+                                <div class="absolute top-2 right-2 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition"><i class="fa-solid fa-external-link"></i></div>
+                            </a>
+
+                        </div>
+                    </div>
+                `
+            },
+
+            // --- SECTION CERTIFICATIONS (GROUPÉES AVEC ONGLETS) ---
+            {
+                id: 'rutgers_group',
+                type: 'certifs',
+                category: 'RUTGERS UNIVERSITY',
+                shortTitle: 'Supply Chain',
+                fullTitle: 'Supply Chain Management',
+                subtitle: 'Planning, Ops & Logistics',
+                tag: 'Spécialisation',
+                image: 'track.jpg', // Image principale du bloc carré (Optionnel)
+                icon: 'fa-boxes-stacked',
+                color: 'text-brand-orange',
+                detailsHTML: `
+                    <div class="mb-8">
+                        <p class="text-slate-300 mb-6">Spécialisation complète en gestion de la chaîne logistique délivrée par l'Université Rutgers.</p>
+                        
+                        <!-- Tabs Buttons -->
+                        <div class="flex flex-wrap gap-2 mb-6 border-b border-dark-700 pb-2">
+                            <button onclick="switchCertifTab(event, 'sc_plan')" class="certif-tab-btn active px-4 py-2 bg-brand-orange text-white rounded font-bold transition">Planning</button>
+                            <button onclick="switchCertifTab(event, 'sc_ops')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Operations</button>
+                            <button onclick="switchCertifTab(event, 'sc_log')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Logistics</button>
+                            <button onclick="switchCertifTab(event, 'sc_sourcing')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Sourcing</button>
+                            <button onclick="switchCertifTab(event, 'sc_pm')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Project Mgmt</button>
+                        </div>
+
+
+                        <!-- Tab: Planning -->
+                        <div id="sc_plan" class="certif-tab-content block animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PLANNING ICI -->
+                            <img src="s3.jpeg" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Supply Chain Planning</h3>
+                            <div class="bg-dark-800 p-6 rounded border-l-4 border-brand-orange">
+                                <p class="text-slate-400 mb-2">Techniques de prévision et planification de la demande.</p>
+                                <ul class="list-disc list-inside text-slate-500 text-sm">
+                                    <li>Alignement offre/demande.</li>
+                                    <li>Planification des ressources de production.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Operations -->
+                        <div id="sc_ops" class="certif-tab-content hidden animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR OPERATIONS ICI -->
+                            <img src="s2.jpeg" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Supply Chain Operations</h3>
+                            <div class="bg-dark-800 p-6 rounded border-l-4 border-brand-yellow">
+                                <p class="text-slate-400 mb-2">Amélioration des processus et efficacité.</p>
+                                <ul class="list-disc list-inside text-slate-500 text-sm">
+                                    <li>Lean Manufacturing & Six Sigma.</li>
+                                    <li>Gestion de la qualité.</li>
+                                    <li>Optimisation des flux (Goulots d'étranglement).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Tab: Logistics -->
+                        <div id="sc_log" class="certif-tab-content hidden animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR LOGISTICS ICI -->
+                            <img src="s1.jpeg" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Supply Chain Logistics</h3>
+                            <div class="bg-dark-800 p-6 rounded border-l-4 border-red-500">
+                                <p class="text-slate-400 mb-2">Transport, entreposage et distribution.</p>
+                                <ul class="list-disc list-inside text-slate-500 text-sm">
+                                    <li>Modes de transport et Logistique internationale.</li>
+                                    <li>Gestion d'entrepôt (WMS).</li>
+                                    <li>Réseaux de distribution.</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <!-- Tab: Sourcing -->
+                        <div id="sc_sourcing" class="certif-tab-content hidden animate-fadeIn">
+                            <img src="sourcing.png" class="w-full h-100 object-contain rounded-lg mb-6 border border-dark-700 bg-white">
+                            <h3 class="text-2xl font-bold text-white mb-4">Supply Chain Sourcing</h3>
+                            <div class="bg-dark-800 p-6 rounded border-l-4 border-emerald-500">
+                                <p class="text-slate-400 mb-2">Processus d'approvisionnement et sélection des fournisseurs dans une économie globale.</p>
+                                <ul class="list-disc list-inside text-slate-500 text-sm space-y-1">
+                                    <li>Évaluation et sélection rigoureuse des fournisseurs.</li>
+                                    <li>Stratégies de négociation et gestion des contrats.</li>
+                                    <li>Optimisation des coûts et gestion des relations fournisseurs (SRM).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                         <!-- Tab: Project Management / Strategy -->
+                        <div id="sc_pm" class="certif-tab-content hidden animate-fadeIn">
+                            <img src="coursera5.png" class="w-full h-100 object-contain rounded-lg mb-6 border border-dark-700 bg-white">
+                            <h3 class="text-2xl font-bold text-white mb-4">Management & Strategy (Capstone)</h3>
+                            <div class="bg-dark-800 p-6 rounded border-l-4 border-purple-500">
+                                <p class="text-slate-400 mb-2">Gestion de projet appliquée et stratégie globale.</p>
+                                <ul class="list-disc list-inside text-slate-500 text-sm space-y-1">
+                                    <li>Planification, exécution et suivi de projets complexes.</li>
+                                    <li>Alignement des ressources avec les stratégies d'entreprise.</li>
+                                    <li>Résolution de problèmes et prise de décision sur le marché mondial.</li>
+                                </ul>
+                            </div>
+                        </div>
+            
+                        
+                    </div>
+                `
+            },
+            {
+                id: 'Microsoft',
+                type: 'certifs',
+                category: 'Coursera',
+                shortTitle: 'Microsoft Power BI Data Analyst',
+                fullTitle: 'Power BI Data Analyst',
+                subtitle: 'Data Analysis & Visualization',
+                tag: 'Certification',
+                image: 'data.jpg', // Image principale du bloc carré (Optionnel)
+                icon: 'fa-solid fa-chart-bar',
+                color: 'text-blue-400',
+                // Ici on injecte le HTML des onglets AVEC LES IMAGES
+                detailsHTML: `
+                    <div class="mb-8">
+                        <p class="text-slate-300 mb-6">Programme complet de certification Power BI couvrant les fondamentaux jusqu'aux concepts avancés.</p>
+                        
+                        <!-- Tabs Buttons -->
+                        <div class="flex flex-wrap gap-2 mb-6 border-b border-dark-700 pb-2">
+                            <button onclick="switchCertifTab(event, 'p1')" class="certif-tab-btn active px-4 py-2 bg-blue-500 text-white rounded font-bold transition">Course 1</button>
+                            <button onclick="switchCertifTab(event, 'p2')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Course 2</button>
+                            <button onclick="switchCertifTab(event, 'p3')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Course 3</button>
+                        </div>
+
+                        <!-- Tab Content:  1 -->
+                        <div id="p1" class="certif-tab-content block animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PYTHON 1 ICI (remplacez le lien src) -->
+                            <img src="P1.png" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+                            
+                            <h3 class="text-2xl font-bold text-white mb-4">Preparing Data for Analysis with Microsoft Excel  <span class="text-sm text-slate-500 font-normal ml-2"></span></h3>
+                            <ul class="list-disc list-inside text-slate-400 space-y-3 bg-dark-800 p-6 rounded border border-dark-700">
+                                <li>Understanding Data Basics.</li>
+                                <li>Importing Data into Excel.</li>
+                                <li>Cleaning Data.</li>
+                                <li>Organizing Data.</li>
+                                <li>Data Validation.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content:  2 -->
+                        <div id="p2" class="certif-tab-content hidden animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PYTHON 2 ICI (remplacez le lien src) -->
+                            <img src="P2.png" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Harnessing the Power of Data with Power BI <span class="text-sm text-slate-500 font-normal ml-2"></span></h3>
+                            <ul class="list-disc list-inside text-slate-400 space-y-3 bg-dark-800 p-6 rounded border border-dark-700">
+                                <li>Understanding Power BI Fundamentals.</li>
+                                <li>Connecting to Data Sources.</li>
+                                <li>Data Cleaning & Transformation (Power Query).</li>
+                                <li>Data Modeling.</li>
+                                <li>DAX (Data Analysis Expressions).</li>
+                                <li>Data Visualization.</li>
+                                <li>Building Interactive Dashboards.</li>
+                                <li>Report Design Best Practices.</li>
+                            </ul>
+                        </div>
+                         <!-- Tab Content:  3 -->
+                        <div id="p3" class="certif-tab-content hidden animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PYTHON 3 ICI (remplacez le lien src) -->
+                            <img src="P3.png" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Extract, Transform and Load Data in Power BI <span class="text-sm text-slate-500 font-normal ml-2"></span></h3>
+                            <ul class="list-disc list-inside text-slate-400 space-y-3 bg-dark-800 p-6 rounded border border-dark-700">
+                                <li>Understanding ETL Concepts.</li>
+                                <li>Extracting Data from Multiple Sources.</li>
+                                <li>Using Power Query Editor.</li>
+                                <li>Cleaning Data.</li>
+                                <li>Transforming Data.</li>
+                                <li>Data Shaping.</li>
+                                <li>Working with Data Types.</li>
+                                <li>Query Optimization.</li>
+                                <li>Loading Data into Power BI.</li>
+                                <li>Creating Relationships After Loading.</li>
+                                <li>Incremental Refresh & Automation.</li>
+                                <li>Error Handling.</li>
+                                <li>Real-World ETL Skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            {
+                id: 'cisco_group',
+                type: 'certifs',
+                category: 'CISCO ACADEMY',
+                shortTitle: 'Python Dev',
+                fullTitle: 'Cisco Networking Academy',
+                subtitle: 'Essential 1 & 2',
+                tag: 'Certification',
+                image: 'python.png', // Image principale du bloc carré (Optionnel)
+                icon: 'fa-brands fa-python',
+                color: 'text-blue-400',
+                // Ici on injecte le HTML des onglets AVEC LES IMAGES
+                detailsHTML: `
+                    <div class="mb-8">
+                        <p class="text-slate-300 mb-6">Programme complet de certification Python couvrant les fondamentaux jusqu'aux concepts avancés.</p>
+                        
+                        <!-- Tabs Buttons -->
+                        <div class="flex flex-wrap gap-2 mb-6 border-b border-dark-700 pb-2">
+                            <button onclick="switchCertifTab(event, 'py1')" class="certif-tab-btn active px-4 py-2 bg-blue-500 text-white rounded font-bold transition">Essential 1</button>
+                            <button onclick="switchCertifTab(event, 'py2')" class="certif-tab-btn px-4 py-2 bg-dark-800 text-slate-400 hover:text-white rounded font-bold transition">Essential 2</button>
+                        </div>
+
+                        <!-- Tab Content: Python 1 -->
+                        <div id="py1" class="certif-tab-content block animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PYTHON 1 ICI (remplacez le lien src) -->
+                            <img src="p1.jpg" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+                            
+                            <h3 class="text-2xl font-bold text-white mb-4">Python Essentials 1 <span class="text-sm text-slate-500 font-normal ml-2">(Bases)</span></h3>
+                            <ul class="list-disc list-inside text-slate-400 space-y-3 bg-dark-800 p-6 rounded border border-dark-700">
+                                <li>Types de données, variables, opérations E/S de base.</li>
+                                <li>Structures de contrôle (boucles, conditions).</li>
+                                <li>Collections de données (listes, tuples, dictionnaires).</li>
+                                <li>Fonctions et modularité de base.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Tab Content: Python 2 -->
+                        <div id="py2" class="certif-tab-content hidden animate-fadeIn">
+                            <!-- PLACEZ VOTRE IMAGE POUR PYTHON 2 ICI (remplacez le lien src) -->
+                            <img src="p2.jpg" class="w-full h-100 object-cover rounded-lg mb-6 border border-dark-700">
+
+                            <h3 class="text-2xl font-bold text-white mb-4">Python Essentials 2 <span class="text-sm text-slate-500 font-normal ml-2">(Avancé)</span></h3>
+                            <ul class="list-disc list-inside text-slate-400 space-y-3 bg-dark-800 p-6 rounded border border-dark-700">
+                                <li>Modules, Packages et gestionnaire PIP.</li>
+                                <li>Chaînes de caractères et méthodes avancées.</li>
+                                <li><strong>Programmation Orientée Objet</strong> (Classes, Objets, Héritage).</li>
+                                <li>Gestion des exceptions et traitement des fichiers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+        ];
+
+
+        // ================= LOGIQUE D'AFFICHAGE =================
+        
+        function renderPortfolio() {
+            const projectsContainer = document.getElementById('projects-container');
+            const activitiesContainer = document.getElementById('activities-container');
+            const certifsContainer = document.getElementById('certifs-container');
+
+            // Vider les conteneurs
+            projectsContainer.innerHTML = '';
+            activitiesContainer.innerHTML = '';
+            certifsContainer.innerHTML = '';
+
+            portfolioData.forEach(item => {
+                const cardHTML = createCardHTML(item);
+                
+                if (item.type === 'projects') {
+                    projectsContainer.innerHTML += cardHTML;
+                } else if (item.type === 'activities') {
+                    activitiesContainer.innerHTML += cardHTML;
+                } else if (item.type === 'certifs') {
+                    certifsContainer.innerHTML += cardHTML;
+                }
+            });
+        }
+
+        function createCardHTML(item) {
+            const colorClass = item.color; 
+            
+            // Logique Image vs Icône
+            let visualContent;
+            if (item.image && item.image.trim() !== '') {
+                // Si une image est fournie
+                visualContent = `<img src="${item.image}" alt="${item.shortTitle}" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-110">`;
+            } else {
+                // Sinon, icône par défaut
+                visualContent = `
+                    <div class="absolute inset-0 bg-slate-800 flex items-center justify-center">
+                        <i class="fa-solid ${item.icon} text-9xl text-dark-700 group-hover:opacity-50 transition duration-500"></i>
+                    </div>
+                `;
+            }
+
+            return `
+                <div onclick="openDetail('${item.id}')" class="square-card group relative bg-dark-800 border border-dark-700 cursor-pointer overflow-hidden rounded-xl">
+                    ${visualContent}
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-transparent opacity-90"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <span class="${colorClass} text-xs font-bold uppercase tracking-wider mb-1 block relative z-10">${item.tag}</span>
+                        <h3 class="text-2xl font-bold text-white group-hover:${colorClass} transition relative z-10">${item.shortTitle}</h3>
+                        <p class="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition translate-y-4 group-hover:translate-y-0 relative z-10">${item.subtitle}</p>
+                    </div>
+                    <div class="absolute top-4 right-4 bg-dark-900/80 p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition z-10">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+            `;
+        }
+
+        function openDetail(id) {
+            const item = portfolioData.find(d => d.id === id);
+            if (!item) return;
+
+            const detailView = document.getElementById('detail-view');
+            document.getElementById('detail-category').innerText = item.category;
+            
+            const contentEl = document.getElementById('detail-content');
+            
+            // Header
+            let iconOrImage = item.image && item.image.trim() !== '' 
+                ? `<img src="${item.image}" class="w-full h-full object-cover">` 
+                : `<i class="fa-solid ${item.icon} text-3xl ${item.color}"></i>`;
+
+            let html = `
+                <div class="flex items-center space-x-4 mb-6 pb-6 border-b border-dark-700">
+                    <div class="w-16 h-16 rounded bg-dark-800 border border-dark-700 flex items-center justify-center shrink-0 overflow-hidden">
+                        ${iconOrImage}
+                    </div>
+                    <div>
+                        <h1 class="text-3xl md:text-4xl font-bold text-white">${item.fullTitle}</h1>
+                    </div>
+                </div>
+            `;
+            html += item.detailsHTML; 
+            contentEl.innerHTML = html;
+
+            detailView.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDetail() {
+            document.getElementById('detail-view').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+        
+        // --- NOUVELLE FONCTION POUR LES ONGLETS ---
+        function switchCertifTab(event, tabId) {
+            // 1. Gérer les boutons (visuel)
+            const parentContainer = event.target.parentElement;
+            const buttons = parentContainer.querySelectorAll('.certif-tab-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-blue-500', 'bg-brand-orange', 'text-white', 'active');
+                btn.classList.add('bg-dark-800', 'text-slate-400'); // Reset style inactif
+            });
+            
+            // Activer le bouton cliqué (On remet une couleur vive générique ou on laisse le CSS faire si classe 'active')
+            event.target.classList.remove('bg-dark-800', 'text-slate-400');
+            event.target.classList.add('bg-brand-orange', 'text-white', 'active'); // On utilise Orange par défaut pour l'actif
+            
+            // 2. Gérer le contenu
+            // On remonte au parent commun pour trouver les contenus associés
+            const detailContent = document.getElementById('detail-content');
+            const contents = detailContent.querySelectorAll('.certif-tab-content');
+            
+            contents.forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            document.getElementById(tabId).classList.remove('hidden');
+        }
+
+
+        function showPage(pageId) {
+            document.getElementById('detail-view').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            document.querySelectorAll('.page-section').forEach(s => s.classList.add('hidden'));
+            document.getElementById(pageId).classList.remove('hidden');
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('text-brand-orange');
+                btn.classList.add('text-slate-400');
+                if (btn.dataset.target === pageId) {
+                    btn.classList.remove('text-slate-400');
+                    btn.classList.add('text-brand-orange');
+                }
+            });
+            window.scrollTo(0, 0);
+        }
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderPortfolio();
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
